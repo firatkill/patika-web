@@ -16,6 +16,8 @@ const OceanTest = (props) => {
       answer.answer = Math.ceil(Math.random() * 5);
     });
     setAnswers(newAnswers);
+    const panel = document.getElementById(`vertical-tabpanel-0`);
+    panel.scrollBy(0, panel.scrollHeight);
   };
 
   const handleChange = (event) => {

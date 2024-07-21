@@ -128,6 +128,7 @@ const CustomerSurvey = (props) => {
 
   return (
     <form onSubmit={submitHandler} className={styles.customerSurveyContainer}>
+      <h1 style={{ textAlign: "center" }}>Müşteri Anketi</h1>
       {questions.map((question) => {
         return (
           <div

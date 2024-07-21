@@ -6,6 +6,7 @@
 }
 .form {
   display: flex;
+
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -89,4 +90,19 @@
 
 .tooltipContainer[isdisabled="true"]:hover .tooltip {
   visibility: visible;
+}
+
+@media only screen and (max-width: 500px) {
+  .question {
+  }
+  .questionText {
+    text-align: center !important;
+  }
+  .radioInputContainer span {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .radioInputContainer p {
+    font-size: 12px;
+  }
 }

@@ -6,7 +6,6 @@ import Section_2 from "./Sections/Section_2";
 import Section_3 from "./Sections/Section_3";
 import Section_4 from "./Sections/Section_4";
 import Image from "next/image";
-import Section_5 from "./Sections/Section_5";
 import { usePathname } from "next/navigation";
 
 const PresentationCarousel = () => {
@@ -35,7 +34,7 @@ const PresentationCarousel = () => {
           setCurrent(scrollTo == 0 ? 1 : scrollTo);
         } else if (e.keyCode == 40) {
           window.scroll(0, current * window.innerHeight);
-          setCurrent(current + 1);
+          setCurrent(current == 4 ? 4 : current + 1);
           console.log("down");
         }
       };
@@ -52,11 +51,11 @@ const PresentationCarousel = () => {
   const clickHandler = (e) => {
     if (window != undefined) {
       const arrowid = e.currentTarget.dataset.arrowid;
-      if (arrowid == "up" && current <= 5 && current > 1) {
+      if (arrowid == "up" && current <= 4 && current > 1) {
         setCurrent(current - 1);
         window.scroll(0, current * window.innerHeight);
         console.log("upclicked, current: " + current);
-      } else if (arrowid == "down" && current < 5 && current >= 1) {
+      } else if (arrowid == "down" && current < 4 && current >= 1) {
         setCurrent(current + 1);
         window.scroll(0, current * window.innerHeight);
         console.log("downclicked, current: " + current);
@@ -72,7 +71,7 @@ const PresentationCarousel = () => {
       <Section_2 />
       <Section_3 />
       <Section_4 />
-      <Section_5 />
+
       <div className={styles.carouselDots}>
         <Image
           data-arrowid="up"
@@ -123,16 +122,6 @@ const PresentationCarousel = () => {
           name="carousel-dots"
         />
         <label for="carousel-dot-4">Go to item 4</label>
-
-        <input
-          onChange={changeHandler}
-          checked={current >= 5}
-          data-buttonId="5"
-          id="carousel-dot-5"
-          type="radio"
-          name="carousel-dots"
-        />
-        <label for="carousel-dot-5">Go to item 5</label>
 
         <Image
           data-arrowid="down"

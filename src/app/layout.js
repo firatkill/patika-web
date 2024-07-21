@@ -4,7 +4,6 @@ import "./globals.css";
 import SideBar from "@/Components/Global/SideBar/SideBar";
 import MainContainer from "@/Components/Global/MainContainer/MainContainer";
 import NavBar from "@/Components/Global/NavBar/NavBar";
-import LandscapeWarning from "@/Components/Global/LandscapeWarning/LandscapeWarning";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +19,6 @@ export default function RootLayout({ children }) {
         <NavBar />
         <SideBar />
         <MainContainer>{children}</MainContainer>
-        <LandscapeWarning />
       </body>
     </html>
   );

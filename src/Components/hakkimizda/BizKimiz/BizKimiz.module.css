@@ -1,5 +1,11 @@
 .bizKimizContainer {
-  padding: 50px 0 0 50px;
+  padding: 75px 0 0 50px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    25deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(174, 173, 245, 0.7808517156862745) 100%
+  );
 }
 
 .profile_cards {
@@ -8,8 +14,6 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
-
-  margin: 30px;
 }
 .card {
   display: flex;

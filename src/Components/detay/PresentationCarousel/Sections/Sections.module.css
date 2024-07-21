@@ -1,7 +1,7 @@
 .sectionContainer {
   height: 100vh;
   width: 100%;
-  padding: 100px 0 0 50px;
+  padding: 100px 50px 0 50px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     25deg,
@@ -15,7 +15,10 @@
   height: 100%;
   width: auto;
 }
-
+.second_section_image {
+  height: 100%;
+  width: auto;
+}
 .draft {
   position: relative;
 
@@ -34,4 +37,20 @@
   width: 50px;
   height: auto;
   background-blend-mode: screen;
+}
+.imageText {
+  background-color: red;
+}
+.third_section_image {
+  width: 100%;
+}
+.third_section_gifContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.third_section_gif {
+  align-self: center;
+  width: auto;
 }

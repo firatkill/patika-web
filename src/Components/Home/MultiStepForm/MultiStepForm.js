@@ -1,5 +1,5 @@
 import { Box, Tab, Tabs } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TabPanel from "./TabPanel";
 import styles from "./MultiStepForm.module.css";
 import OceanTest from "../Step_1/OceanTest";
@@ -16,7 +16,7 @@ function a11yProps(index) {
 
 const MultiStepForm = () => {
   const [value, setValue] = useState(0);
-
+  const [isMobile, setIsMobile] = useState(false);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -31,6 +31,22 @@ const MultiStepForm = () => {
   const previousStep = () => {
     setValue(value - 1);
   };
+  useEffect(() => {
+    if (window != undefined) {
+      window.onload = () => {
+        if (window.innerWidth < 600) {
+          setIsMobile(true);
+        }
+      };
+      window.addEventListener("resize", () => {
+        if (window.innerWidth < 600) {
+          setIsMobile(true);
+        } else {
+          setIsMobile(false);
+        }
+      });
+    }
+  }, [window]);
 
   return (
     <div className={styles.multiStepFormContainer}>
@@ -39,14 +55,15 @@ const MultiStepForm = () => {
           flexGrow: 1,
           bgcolor: "background.paper",
           borderRadius: "16px",
-          overflow: "hidden",
+          overflow: isMobile ? "scroll" : "hidden",
 
-          display: "flex",
+          display: isMobile ? "block" : "flex",
+
           height: "100%",
         }}
       >
         <Tabs
-          orientation="vertical"
+          orientation={isMobile ? "horizontal" : "vertical"}
           variant="scrollable"
           value={value}
           onChange={handleChange}
@@ -67,7 +84,7 @@ const MultiStepForm = () => {
           <Tab label="Anket" {...a11yProps(2)} />
           <Tab label="Sonuçlar ve Kampanya Önerileri" {...a11yProps(3)} />
         </Tabs>
-        <TabPanel value={value} index={0}>
+        <TabPanel className={styles.tabPanel} value={value} index={0}>
           <OceanTest nextStep={nextStep} />
         </TabPanel>
         <TabPanel value={value} index={1}>
