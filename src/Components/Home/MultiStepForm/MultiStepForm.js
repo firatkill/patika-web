@@ -17,6 +17,7 @@ function a11yProps(index) {
 const MultiStepForm = () => {
   const [value, setValue] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isWindowDefined, setIsWindowdefined] = useState(false);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -31,13 +32,13 @@ const MultiStepForm = () => {
   const previousStep = () => {
     setValue(value - 1);
   };
+
   useEffect(() => {
     if (window != undefined) {
-      window.onload = () => {
-        if (window.innerWidth < 600) {
-          setIsMobile(true);
-        }
-      };
+      if (window.innerWidth < 600) {
+        setIsMobile(true);
+      }
+
       window.addEventListener("resize", () => {
         if (window.innerWidth < 600) {
           setIsMobile(true);
