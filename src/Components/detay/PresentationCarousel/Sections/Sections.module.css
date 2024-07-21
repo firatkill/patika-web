@@ -16,8 +16,8 @@
   width: auto;
 }
 .second_section_image {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 .draft {
   position: relative;
@@ -53,4 +53,9 @@
 .third_section_gif {
   align-self: center;
   width: auto;
+}
+@media only screen and (orientation: landscape) {
+  .section_3_Container {
+    padding: 50px 0 0 50px;
+  }
 }

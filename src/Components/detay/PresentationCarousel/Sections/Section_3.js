@@ -10,13 +10,13 @@ const Section_3 = () => {
         alignItems: "center",
         justifyContent: "center",
       }}
-      className={styles.sectionContainer}
+      className={`${styles.sectionContainer} ${styles.section_3_Container}`}
     >
       <Image
         style={{
-          width: "100%",
-          height: "auto",
-          maxHeight: "30vh",
+          width: "auto !important",
+          height: "30% !important",
+          maxWidth: "900px",
         }}
         width={100}
         height={100}
@@ -28,8 +28,10 @@ const Section_3 = () => {
 
       <Image
         style={{
-          height: "auto",
-          maxHeight: "30vh",
+          height: "40% !important",
+          width: "auto !important",
+          maxWidth: "600px",
+          marginTop: "-3%",
         }}
         width={100}
         height={75}
@@ -41,7 +43,13 @@ const Section_3 = () => {
 
       <h4
         className={styles.mobileIntegText}
-        style={{ fontSize: "1rem", textAlign: "center" }}
+        style={{
+          height: "30% !important",
+          width: "100% !important",
+          maxWidth: "900px",
+          fontSize: "1.25rem",
+          textAlign: "center",
+        }}
       >
         Müşteriden elde edilmiş tüm bilgiler ( kişilik testleri, anketler ve
         seçilmiş kampanyalar ) güncel bilgilerle tekrar tahmin modeline

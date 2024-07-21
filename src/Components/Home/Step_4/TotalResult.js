@@ -1,7 +1,7 @@
 import { Card, CardActionArea, CardContent, Grid } from "@mui/material";
 import styles from "./TotalResult.module.css";
 
-const TotalResult = () => {
+const TotalResult = (props) => {
   return (
     <div classname={styles.totalResultContainer}>
       <Grid container spacing={2}>
@@ -43,6 +43,7 @@ const TotalResult = () => {
             KAMPANYA ÖNERİLERİ
           </h2>
           <Grid container spacing={2}>
+            {/* Cards */}
             <Grid item xs={12} md={6} lg={4}>
               <Card sx={{ width: "100%" }}>
                 <CardActionArea>
@@ -114,6 +115,9 @@ const TotalResult = () => {
               </Card>
             </Grid>
           </Grid>
+          <button className={styles.prevButton} onClick={props.previousStep}>
+            Geri
+          </button>
         </Grid>
       </Grid>
     </div>

@@ -28,14 +28,12 @@ const PresentationCarousel = () => {
       };
       window.onkeyup = (e) => {
         if (e.keyCode == 38) {
-          console.log("up");
           const scrollTo = Math.ceil(window.scrollY / window.innerHeight);
           window.scroll(0, (current - 1) * window.innerHeight);
           setCurrent(scrollTo == 0 ? 1 : scrollTo);
         } else if (e.keyCode == 40) {
           window.scroll(0, current * window.innerHeight);
           setCurrent(current == 4 ? 4 : current + 1);
-          console.log("down");
         }
       };
     }

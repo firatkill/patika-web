@@ -11,9 +11,22 @@ const Section_2 = () => {
           alignItems: "center",
         }}
         container
-        spacing={2}
+        spacing={10}
       >
-        <Grid sx={{ height: "100%" }} item xs={6} md={4}>
+        <Grid
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100%",
+            width: "auto",
+            maxWidth: "400px !important",
+          }}
+          item
+          xs={5}
+          md={4}
+        >
           <Image
             width={100}
             height={100}
@@ -23,7 +36,7 @@ const Section_2 = () => {
             className={styles.second_section_image}
           />
         </Grid>
-        <Grid item xs={6} md={8}>
+        <Grid item xs={7} md={8}>
           <h3>
             Daha önce edinilmiş kişilik testi tahminleri ve anketlere dayanarak
             önerilen anketler arasında müşteri en çok istediğini seçer.

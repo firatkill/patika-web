@@ -69,7 +69,7 @@ const OceanResults = (props) => {
       <BarChart
         height={300}
         margin={{
-          left: 60,
+          left: 75,
 
           top: 100,
         }}
@@ -77,7 +77,7 @@ const OceanResults = (props) => {
         yAxis={[
           {
             scaleType: "band",
-            data: ["OCEAN"],
+            data: ["O.C.E.A.N."],
           },
         ]}
         xAxis={[{ valueFormatter }]}
