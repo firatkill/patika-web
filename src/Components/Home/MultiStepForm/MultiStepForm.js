@@ -46,7 +46,7 @@ const MultiStepForm = () => {
         }
       });
     }
-  }, [window]);
+  }, []);
 
   return (
     <div className={styles.multiStepFormContainer}>
