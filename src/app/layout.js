@@ -13,6 +13,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html>
+      <head>
+        <title>Akbank Kampanya Öneri Sistemi </title>
+      </head>
       <Provider store={store}>
         <body className={inter.className}>
           <NavBar />

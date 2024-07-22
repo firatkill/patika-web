@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Bu proje, [Next.js](https://nextjs.org/) ile oluşturulmuş bir web uygulamasıdır.
 
-## Getting Started
+### Kurulum
 
-First, run the development server:
+npm install # veya yarn install ile dependency'leri yükleyin.
+
+````
+
+### Geliştirme Sunucusunu Başlatma
+
+Geliştirme sunucusunu başlatmak için aşağıdaki komutu çalıştırın:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev # veya yarn dev
+````
+
+Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine gidin. Değişiklik yaptığınızda sayfa otomatik olarak yeniden yüklenecektir.
+
+### Production Build
+
+Prod build için:
+
+```bash
+npm run build # veya yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ardından, prod ortamında çalıştırmak için:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm start # veya yarn start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+\*\*Projeyi Backend_flask ile birlikte çalıştırın.
 
-## Learn More
+## Proje Yapısı
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```plaintext
+/
+├── components/      # React bileşenleri
+├── app/          	 # Next.js sayfaları
+├── public/          # Statik dosyalar
+├── Data/           # Yardımcı,Dummy veriler
+├──Redux/   	# redux store dosyaları
+└── Util/    	 # yardımcı fonksiyonlar
+```

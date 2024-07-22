@@ -65,7 +65,7 @@ const BizKimiz = () => {
             width={1260}
             height={750}
             priority
-            src="/dummy.webp"
+            src="/firat.webp"
             alt="profile"
             className={styles.card_image}
           />
@@ -137,7 +137,7 @@ const BizKimiz = () => {
             width={1260}
             height={750}
             priority
-            src="/dummy.webp"
+            src="/sezer.webp"
             alt="profile"
             className={styles.card_image}
           />
@@ -149,7 +149,7 @@ const BizKimiz = () => {
             </h2>
 
             <span className={styles.card_description_profession}>
-              Full Stack Web Geliştirici{" "}
+              Veri Bilimci
             </span>
 
             <span className={styles.card_description_company}>
@@ -204,7 +204,7 @@ const BizKimiz = () => {
             width={1260}
             height={750}
             priority
-            src="/dummy.webp"
+            src="/mehmet.webp"
             alt="profile"
             className={styles.card_image}
           />
