@@ -3,30 +3,30 @@ import styles from "./OceanResults.module.css";
 import { useSelector } from "react-redux";
 
 const OceanResults = (props) => {
-  const content = useSelector((state) => state.content.oceanContent);
-  const campaigns = Object.values(content.campaigns);
+  const oceanContent = useSelector((state) => state.content.oceanContent);
+  const campaigns = Object.values(oceanContent.campaigns);
   console.log();
 
   const series = [
     {
       label: "Açıklık",
-      data: [content.results.O],
+      data: [oceanContent.results.O],
     },
     {
       label: "Sorumluluk",
-      data: [content.results.C],
+      data: [oceanContent.results.C],
     },
     {
       label: "DışaDönüklük",
-      data: [content.results.E],
+      data: [oceanContent.results.E],
     },
     {
       label: "Uyumluluk",
-      data: [content.results.A],
+      data: [oceanContent.results.A],
     },
     {
       label: "Duygusal Denge",
-      data: [content.results.N],
+      data: [oceanContent.results.N],
     },
   ];
   const valueFormatter = (value) => `${value * 20}`;
@@ -36,7 +36,10 @@ const OceanResults = (props) => {
       <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>
         Ocean Testi Sonuçları
       </h1>
-      <p>{content.oceanComment}</p>
+      <p>
+        Müşterinin kişiliği {oceanContent.customerClass}. sınıfa ait.{" "}
+        {oceanContent.oceanComment}
+      </p>
       <ul className={styles.list}>
         <h4 style={{ marginBottom: "1rem" }}>
           Kişilik Özellikleri dikkate alınarak önerilebilecek kampanyalar:

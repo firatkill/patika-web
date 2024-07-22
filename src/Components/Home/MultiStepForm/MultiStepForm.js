@@ -6,6 +6,8 @@ import OceanTest from "../Step_1/OceanTest";
 import OceanResults from "../Step_2/OceanResults";
 import CustomerSurvey from "../Step_3/CustomerSurvey";
 import TotalResult from "../Step_4/TotalResult";
+import { useSelector } from "react-redux";
+import Spinner from "@/Components/Global/Spinner/Spinner";
 
 function a11yProps(index) {
   return {
@@ -18,16 +20,15 @@ const MultiStepForm = () => {
   const [value, setValue] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isWindowDefined, setIsWindowdefined] = useState(false);
+  const isLoading = useSelector((state) => state.content.loading);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const OceanTestSubmitHandler = (e) => {
-    e.preventDefault();
-    //servera gönder
-    setValue(value + 1);
-  };
+
   const nextStep = () => {
-    setValue(value + 1);
+    if (!isLoading) {
+      setValue(value + 1);
+    }
   };
   const previousStep = () => {
     setValue(value - 1);
@@ -51,6 +52,7 @@ const MultiStepForm = () => {
 
   return (
     <div className={styles.multiStepFormContainer}>
+      <Spinner />
       <Box
         sx={{
           flexGrow: 1,

@@ -16,6 +16,8 @@ import {
 import { useState } from "react";
 import { pink } from "@mui/material/colors";
 import { useTheme } from "@emotion/react";
+import { postSurveyAnswers } from "@/Redux/content";
+import { useDispatch, useSelector } from "react-redux";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -33,6 +35,8 @@ const CustomerSurvey = (props) => {
   const [answersUpdated, setAnswersUpdated] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const theme = useTheme();
+  const dispatch = useDispatch();
+  const survanswers = useSelector((state) => state.content.surveyContent);
 
   const inputChangeHandler = (e, questionCode) => {
     setAnswersUpdated(!answersUpdated);
@@ -83,7 +87,7 @@ const CustomerSurvey = (props) => {
 
     const elem = document
       .getElementById(`vertical-tabpanel-2`)
-      .scrollBy(0, elem2.scrollHeight + 8);
+      .scrollBy(0, elem2 != undefined && elem2.scrollHeight + 8);
   };
 
   const controlProps = (questionId, questionCode, item) => ({
@@ -118,8 +122,12 @@ const CustomerSurvey = (props) => {
       groupThreeAnswers.every((answer) => answer.answer != [])
     ) {
       //now we can submit
-
-      window.alert("submit success");
+      dispatch(
+        postSurveyAnswers({
+          prompt:
+            "Bir Banka müdürüyüm ve müşteriye özel kişiselleştirilmiş kampanya yapmak istiyorum. Ocean testi yaptım ve bu test sayesinde yaptığım bazı çıkarımlarım var. Ayrıca bu kullanıcıya özel anket verilerini de sana vereceğim. senden vermeni istediğim çıktı aşağıdaki şekilde olacak , bir python dictionary’si içinde ve yalnızca bu dictionary'yi yanıt olarak göndereceksin. çıktı olarak sadece bu dict'i almak istiyorum. python dict'inin yapısı şöyle olacak : campaigns içinde kampanya 1'den 5 e kadar kampanyaların olduğu bir array şeklinde.  Vermeni istediğim kampanyalar ise olabildiğince spesifik olacak. müşterinin ilgisini çekecek alanlarda, gerçek bir banka kampanyası gibi olacak. Örneğin ‘müşteri kitap okumayı seviyor’ bilgisine sahipsek, ‘Anlaşmalı kitap mağazalarında %15 indirim!’ şeklinde bir kampanya istiyorum. comment içinde ise bir string halinde bu müşterinin anket sonuçlarına ve kişilik analizine bakarak nelerden hoşlandığına, nelerden yola çıkarak bu kampanyaları önerdiğine değin.  bu formatta 5 adet kampanyayı ve yorumu dictionary içinde ver. müşteriye yaptığım ocean anketinin sonucunda yaptığım çıkarımlar şöyle: ‘Bu sınıftaki kişiler dışa dönük, duygusal olarak dengeli, uyumlu, sorumlu ve açık bir yapıya sahiptir. Duygusal denge bu kümede en yüksek seviyededir.' .  düşündüğüm genel kampanyalar:  ‘Yeni Yatırım Fırsatları: Yüksek getirili yeni yatırım fırsatları ve ürünleri.’, ‘Deneyim Paketleri: Ücretsiz veya indirimli seyahat ve eğlence deneyim paketleri.’, ‘Özel Müşteri Bonusları: Yatırımlarda ekstra bonuslar ve avantajlı teklifler.’, ‘Yeni Teknoloji Ürünleri: Finansal yönetim için yeni teknoloji ürünleri ve araçları.’, ‘İnovasyon Seminerleri: Yeni yatırım trendleri ve finansal inovasyonlar üzerine seminerler.’ anket soruları ve verdiği cevaplar ise böyle: Ne sıklıkla yatırım konusunda araştırma yaparsın (1'den 5'e kadar) – 1 Ne sıklıkla Seyahat edersin (1'den 5'e kadar) – 5 Bir hizmeti uzun süre kullananların ödüllendirilmesi gerektiğini düşünür müsün?  (1'den 5'e kadar) - 2 Yeni Teknoloji ilgini çekiyor mu?  (1'den 5'e kadar) – 5 Teknolojiyle ne kadar iç içesin? (1'den 5'e kadar) - 4 ",
+        })
+      );
       props.nextStep();
     } else {
       window.alert("önce doldur");

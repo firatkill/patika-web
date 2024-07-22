@@ -1,6 +1,16 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const initialState = {
   loading: false,
+  surveyContent: {
+    campaigns: [
+      "kampanya 1",
+      "kampanya 2",
+      "kampanya 3",
+      "kampanya 4",
+      "kampanya 5",
+    ],
+    comment: "",
+  },
   oceanContent: {
     id: 0,
     customerClass: 0,
@@ -32,6 +42,21 @@ export const postOceanAnswers = createAsyncThunk(
     return response;
   }
 );
+export const postSurveyAnswers = createAsyncThunk(
+  "postSurveyAnswers",
+  async (json) => {
+    let response = await fetch("http://127.0.0.1:5000/ask-to-gpt", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(json),
+    });
+    response = response.json();
+
+    return response;
+  }
+);
 
 const contentSlice = createSlice({
   name: "content",
@@ -52,6 +77,19 @@ const contentSlice = createSlice({
       state.oceanContent = action.payload;
     });
     builder.addCase(postOceanAnswers.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.error.message;
+    });
+    builder.addCase(postSurveyAnswers.pending, (state, action) => {
+      state.loading = true;
+      state.error = "";
+    });
+    builder.addCase(postSurveyAnswers.fulfilled, (state, action) => {
+      state.loading = false;
+      console.log(action.payload);
+      state.surveyContent = action.payload;
+    });
+    builder.addCase(postSurveyAnswers.rejected, (state, action) => {
       state.loading = false;
       state.error = action.error.message;
     });

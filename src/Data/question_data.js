@@ -203,159 +203,159 @@ export const SurveyQuestions = [
     question_code: "KH3",
     question_group: 1,
   },
-  {
-    id: 6,
-    question: "Mevduat hesaplarının faiz oranlarından memnun musunuz?",
-    question_code: "YTU1",
-    question_group: 1,
-  },
-  {
-    id: 7,
-    question: "Yatırım fonu seçeneklerinin çeşitliliğinden memnun musunuz?",
-    question_code: "YTU2",
-    question_group: 1,
-  },
-  {
-    id: 8,
-    question:
-      "Yatırım ürünleri hakkında sağlanan danışmanlık hizmetinden memnun musunuz?",
-    question_code: "YTU3",
-    question_group: 1,
-  },
-  {
-    id: 9,
-    question: "İnternet bankacılığı hizmetlerinden memnun musunuz?",
-    question_code: "DB1",
-    question_group: 1,
-  },
-  {
-    id: 10,
-    question: "Mobil bankacılık uygulamasının hızından memnun musunuz?",
-    question_code: "DB2",
-    question_group: 1,
-  },
-  {
-    id: 11,
-    question:
-      "Dijital bankacılık üzerinden sağlanan güvenlik önlemlerinden memnun musunuz?",
-    question_code: "DB3",
-    question_group: 1,
-  },
-  {
-    id: 12,
-    question: "Müşteri hizmetlerinin ulaşılabilirliğinden memnun musunuz?",
-    question_code: "MH1",
-    question_group: 1,
-  },
-  {
-    id: 13,
-    question:
-      "Müşteri hizmetleri temsilcilerinin sorun çözme yeteneğinden memnun musunuz?",
-    question_code: "MH2",
-    question_group: 1,
-  },
-  {
-    id: 14,
-    question:
-      "Müşteri hizmetleri temsilcilerinin bilgi düzeyinden memnun musunuz?",
-    question_code: "MH3",
-    question_group: 1,
-  },
-  {
-    id: 15,
-    question:
-      "Bankamızın sunquestion_group: 1,duğu kampanyalardan genel olarak memnun musunuz?",
-    question_code: "GD1",
-    question_group: 1,
-  },
-  {
-    id: 16,
-    question:
-      "Bankamızın sunduğu hizmetlerin fiyat/performans oranından memnun musunuz?",
-    question_code: "GD2",
-    question_group: 1,
-  },
-  {
-    id: 17,
-    question: "Bankamızın genel müşteri memnuniyeti düzeyinden memnun musunuz?",
-    question_code: "GD3",
-    question_group: 1,
-  },
-  {
-    id: 18,
-    question:
-      "Bankamızdan almak istediğiniz yeni hizmetler veya kampanyalar nelerdir?  Birkaç anahtar kelime ile açıklayınız.",
-    question_code: "TQ1",
-    question_group: 3,
-  },
-  {
-    id: 19,
-    question:
-      "Bankamızın mevcut hizmetlerinde gördüğünüz eksiklikler nelerdir ve nasıl iyileştirilebilirler?  Birkaç anahtar kelime ile açıklayınız.",
-    question_code: "TQ2",
-    question_group: 3,
-  },
-  {
-    id: 20,
-    question:
-      "Bankamızın sunduğu hizmetler arasında sizin için en faydalı olanlar hangileridir? Birkaç anahtar kelime ile açıklayınız.",
-    question_code: "TQ3",
-    question_group: 3,
-  },
-  {
-    id: 21,
-    question:
-      "Bankamızın sunduğu hizmetler arasında sizin için en az faydalı olanlar hangileridir?  Birkaç anahtar kelime ile açıklayınız.",
-    question_code: "TQ4",
-    question_group: 3,
-  },
-  {
-    id: 22,
-    question: "Aşağıdakilerden hangisini seversin? Birini seçiniz. ",
-    options: [
-      {
-        id: 0,
-        option:
-          "herhangi şık sçeebilirsin çoktan seçmeliler asflkmdcxblkmmasdlgkxcnmkamlsşdföglkbvxmlsmdglşmbxlkvcmnlşsfdgkbflmxblkm",
-      },
-      { id: 1, option: "şık" },
-      { id: 2, option: "seçebilirsin" },
-      { id: 3, option: "çoktan" },
-      { id: 4, option: "seçmeli" },
-    ],
-    max: 1,
-    question_code: "CS1",
-    question_group: 2,
-  },
-  {
-    id: 23,
-    question: "Aşağıdakilerden Hangisi? en fazla 3 tane seçebilirsiniz.",
-    options: [
-      { id: 0, option: "1. şık" },
-      { id: 1, option: "2. şık" },
-      { id: 2, option: "3. şık" },
-      { id: 3, option: "4. şık" },
-      { id: 4, option: "5. şık" },
-    ],
-    max: 3,
-    question_code: "CS2",
-    question_group: 2,
-  },
-  {
-    id: 24,
-    question:
-      "Aşağıdakilerden hangisi sizin için daha iyi?  en fazla 4 tane seçebilirsiniz.",
-    options: [
-      { id: 0, option: "1. şık" },
-      { id: 1, option: "2. şık" },
-      { id: 2, option: "3. şık" },
-      { id: 3, option: "4. şık" },
-      { id: 4, option: "5. şık" },
-    ],
-    max: 4,
-    question_code: "CS3",
-    question_group: 2,
-  },
+  // {
+  //   id: 6,
+  //   question: "Mevduat hesaplarının faiz oranlarından memnun musunuz?",
+  //   question_code: "YTU1",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 7,
+  //   question: "Yatırım fonu seçeneklerinin çeşitliliğinden memnun musunuz?",
+  //   question_code: "YTU2",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 8,
+  //   question:
+  //     "Yatırım ürünleri hakkında sağlanan danışmanlık hizmetinden memnun musunuz?",
+  //   question_code: "YTU3",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 9,
+  //   question: "İnternet bankacılığı hizmetlerinden memnun musunuz?",
+  //   question_code: "DB1",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 10,
+  //   question: "Mobil bankacılık uygulamasının hızından memnun musunuz?",
+  //   question_code: "DB2",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 11,
+  //   question:
+  //     "Dijital bankacılık üzerinden sağlanan güvenlik önlemlerinden memnun musunuz?",
+  //   question_code: "DB3",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 12,
+  //   question: "Müşteri hizmetlerinin ulaşılabilirliğinden memnun musunuz?",
+  //   question_code: "MH1",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 13,
+  //   question:
+  //     "Müşteri hizmetleri temsilcilerinin sorun çözme yeteneğinden memnun musunuz?",
+  //   question_code: "MH2",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 14,
+  //   question:
+  //     "Müşteri hizmetleri temsilcilerinin bilgi düzeyinden memnun musunuz?",
+  //   question_code: "MH3",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 15,
+  //   question:
+  //     "Bankamızın sunquestion_group: 1,duğu kampanyalardan genel olarak memnun musunuz?",
+  //   question_code: "GD1",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 16,
+  //   question:
+  //     "Bankamızın sunduğu hizmetlerin fiyat/performans oranından memnun musunuz?",
+  //   question_code: "GD2",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 17,
+  //   question: "Bankamızın genel müşteri memnuniyeti düzeyinden memnun musunuz?",
+  //   question_code: "GD3",
+  //   question_group: 1,
+  // },
+  // {
+  //   id: 18,
+  //   question:
+  //     "Bankamızdan almak istediğiniz yeni hizmetler veya kampanyalar nelerdir?  Birkaç anahtar kelime ile açıklayınız.",
+  //   question_code: "TQ1",
+  //   question_group: 3,
+  // },
+  // {
+  //   id: 19,
+  //   question:
+  //     "Bankamızın mevcut hizmetlerinde gördüğünüz eksiklikler nelerdir ve nasıl iyileştirilebilirler?  Birkaç anahtar kelime ile açıklayınız.",
+  //   question_code: "TQ2",
+  //   question_group: 3,
+  // },
+  // {
+  //   id: 20,
+  //   question:
+  //     "Bankamızın sunduğu hizmetler arasında sizin için en faydalı olanlar hangileridir? Birkaç anahtar kelime ile açıklayınız.",
+  //   question_code: "TQ3",
+  //   question_group: 3,
+  // },
+  // {
+  //   id: 21,
+  //   question:
+  //     "Bankamızın sunduğu hizmetler arasında sizin için en az faydalı olanlar hangileridir?  Birkaç anahtar kelime ile açıklayınız.",
+  //   question_code: "TQ4",
+  //   question_group: 3,
+  // },
+  // {
+  //   id: 22,
+  //   question: "Aşağıdakilerden hangisini seversin? Birini seçiniz. ",
+  //   options: [
+  //     {
+  //       id: 0,
+  //       option:
+  //         "herhangi şık sçeebilirsin çoktan seçmeliler asflkmdcxblkmmasdlgkxcnmkamlsşdföglkbvxmlsmdglşmbxlkvcmnlşsfdgkbflmxblkm",
+  //     },
+  //     { id: 1, option: "şık" },
+  //     { id: 2, option: "seçebilirsin" },
+  //     { id: 3, option: "çoktan" },
+  //     { id: 4, option: "seçmeli" },
+  //   ],
+  //   max: 1,
+  //   question_code: "CS1",
+  //   question_group: 2,
+  // },
+  // {
+  //   id: 23,
+  //   question: "Aşağıdakilerden Hangisi? en fazla 3 tane seçebilirsiniz.",
+  //   options: [
+  //     { id: 0, option: "1. şık" },
+  //     { id: 1, option: "2. şık" },
+  //     { id: 2, option: "3. şık" },
+  //     { id: 3, option: "4. şık" },
+  //     { id: 4, option: "5. şık" },
+  //   ],
+  //   max: 3,
+  //   question_code: "CS2",
+  //   question_group: 2,
+  // },
+  // {
+  //   id: 24,
+  //   question:
+  //     "Aşağıdakilerden hangisi sizin için daha iyi?  en fazla 4 tane seçebilirsiniz.",
+  //   options: [
+  //     { id: 0, option: "1. şık" },
+  //     { id: 1, option: "2. şık" },
+  //     { id: 2, option: "3. şık" },
+  //     { id: 3, option: "4. şık" },
+  //     { id: 4, option: "5. şık" },
+  //   ],
+  //   max: 4,
+  //   question_code: "CS3",
+  //   question_group: 2,
+  // },
 ];
 
 // question_group;
@@ -370,23 +370,23 @@ export const SurveyAnswers = [
   { id: 3, question_code: "KH1", answer: 0, question_group: 1 },
   { id: 4, question_code: "KH2", answer: 0, question_group: 1 },
   { id: 5, question_code: "KH3", answer: 0, question_group: 1 },
-  { id: 6, question_code: "YTU1", answer: 0, question_group: 1 },
-  { id: 7, question_code: "YTU2", answer: 0, question_group: 1 },
-  { id: 8, question_code: "YTU3", answer: 0, question_group: 1 },
-  { id: 9, question_code: "DB1", answer: 0, question_group: 1 },
-  { id: 10, question_code: "DB2", answer: 0, question_group: 1 },
-  { id: 11, question_code: "DB3", answer: 0, question_group: 1 },
-  { id: 12, question_code: "MH1", answer: 0, question_group: 1 },
-  { id: 13, question_code: "MH2", answer: 0, question_group: 1 },
-  { id: 14, question_code: "MH3", answer: 0, question_group: 1 },
-  { id: 15, question_code: "GD1", answer: 0, question_group: 1 },
-  { id: 16, question_code: "GD2", answer: 0, question_group: 1 },
-  { id: 17, question_code: "GD3", answer: 0, question_group: 1 },
-  { id: 18, question_code: "TQ1", answer: "", question_group: 3 },
-  { id: 19, question_code: "TQ2", answer: "", question_group: 3 },
-  { id: 20, question_code: "TQ3", answer: "", question_group: 3 },
-  { id: 21, question_code: "TQ4", answer: "", question_group: 3 },
-  { id: 22, question_code: "CS1", answer: [], question_group: 2 },
-  { id: 23, question_code: "CS2", answer: [], question_group: 2 },
-  { id: 24, question_code: "CS3", answer: [], question_group: 2 },
+  // { id: 6, question_code: "YTU1", answer: 0, question_group: 1 },
+  // { id: 7, question_code: "YTU2", answer: 0, question_group: 1 },
+  // { id: 8, question_code: "YTU3", answer: 0, question_group: 1 },
+  // { id: 9, question_code: "DB1", answer: 0, question_group: 1 },
+  // { id: 10, question_code: "DB2", answer: 0, question_group: 1 },
+  // { id: 11, question_code: "DB3", answer: 0, question_group: 1 },
+  // { id: 12, question_code: "MH1", answer: 0, question_group: 1 },
+  // { id: 13, question_code: "MH2", answer: 0, question_group: 1 },
+  // { id: 14, question_code: "MH3", answer: 0, question_group: 1 },
+  // { id: 15, question_code: "GD1", answer: 0, question_group: 1 },
+  // { id: 16, question_code: "GD2", answer: 0, question_group: 1 },
+  // { id: 17, question_code: "GD3", answer: 0, question_group: 1 },
+  // { id: 18, question_code: "TQ1", answer: "", question_group: 3 },
+  // { id: 19, question_code: "TQ2", answer: "", question_group: 3 },
+  // { id: 20, question_code: "TQ3", answer: "", question_group: 3 },
+  // { id: 21, question_code: "TQ4", answer: "", question_group: 3 },
+  // { id: 22, question_code: "CS1", answer: [], question_group: 2 },
+  // { id: 23, question_code: "CS2", answer: [], question_group: 2 },
+  // { id: 24, question_code: "CS3", answer: [], question_group: 2 },
 ];
