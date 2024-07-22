@@ -1,62 +1,49 @@
 import { BarChart } from "@mui/x-charts";
 import styles from "./OceanResults.module.css";
+import { useSelector } from "react-redux";
 
 const OceanResults = (props) => {
-  const dataset = [
-    {
-      value: 2.5,
-      key: "Openness (Açıklık)",
-    },
-    {
-      value: 3,
-      key: "C",
-    },
-    {
-      value: 3,
-      key: "E",
-    },
-    {
-      value: 4,
-      key: "A",
-    },
-    {
-      value: 3.5,
-      key: "N",
-    },
-  ];
+  const content = useSelector((state) => state.content.oceanContent);
+  const campaigns = Object.values(content.campaigns);
+  console.log();
+
   const series = [
     {
       label: "Açıklık",
-      data: [3.5],
+      data: [content.results.O],
     },
     {
       label: "Sorumluluk",
-      data: [4],
+      data: [content.results.C],
     },
     {
       label: "DışaDönüklük",
-      data: [4.5],
+      data: [content.results.E],
     },
     {
       label: "Uyumluluk",
-      data: [5],
+      data: [content.results.A],
     },
     {
       label: "Duygusal Denge",
-      data: [1],
+      data: [content.results.N],
     },
   ];
   const valueFormatter = (value) => `${value * 20}`;
-
+  console.log(campaigns);
   return (
     <div className={styles.oceanResultsContainer}>
-      <h1 style={{ textAlign: "center" }}>Ocean Testi Sonuçları</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>
+        Ocean Testi Sonuçları
+      </h1>
+      <p>{content.oceanComment}</p>
       <ul className={styles.list}>
-        <li>Yorum 1</li>
-        <li>Yorum 2</li>
-        <li>Yorum 3</li>
-        <li>Yorum 4</li>
-        <li>Yorum 5</li>
+        <h4 style={{ marginBottom: "1rem" }}>
+          Kişilik Özellikleri dikkate alınarak önerilebilecek kampanyalar:
+        </h4>
+        {campaigns.map((elem) => (
+          <li>{elem}</li>
+        ))}
       </ul>
       {/* <Image
         className={styles.resultFig}

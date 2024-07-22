@@ -3,11 +3,13 @@ import styles from "./OceanTest.module.css";
 import { green, red } from "@mui/material/colors";
 import { useState } from "react";
 import { OceanTestAnswers, OceanTestQuestions } from "@/Data/question_data";
+import { useDispatch } from "react-redux";
+import { postOceanAnswers } from "@/Redux/content";
 
 const OceanTest = (props) => {
   const questions = OceanTestQuestions;
   const [answers, setAnswers] = useState(OceanTestAnswers);
-
+  const dispatch = useDispatch();
   const generateRandomAnswers = (e) => {
     e.preventDefault();
 
@@ -55,7 +57,8 @@ const OceanTest = (props) => {
   });
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(answers);
+    dispatch(postOceanAnswers(answers));
+
     props.nextStep();
   };
 

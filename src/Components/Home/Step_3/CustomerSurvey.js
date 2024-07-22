@@ -80,7 +80,7 @@ const CustomerSurvey = (props) => {
     const elem2 = document.getElementById(
       `surveyQuestion-${Number.parseInt(questionId) + 1}`
     );
-    console.log(elem2);
+
     const elem = document
       .getElementById(`vertical-tabpanel-2`)
       .scrollBy(0, elem2.scrollHeight + 8);
@@ -118,7 +118,7 @@ const CustomerSurvey = (props) => {
       groupThreeAnswers.every((answer) => answer.answer != [])
     ) {
       //now we can submit
-      console.log(answers);
+
       window.alert("submit success");
       props.nextStep();
     } else {

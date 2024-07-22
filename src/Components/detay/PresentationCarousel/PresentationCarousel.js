@@ -52,11 +52,9 @@ const PresentationCarousel = () => {
       if (arrowid == "up" && current <= 4 && current > 1) {
         setCurrent(current - 1);
         window.scroll(0, current * window.innerHeight);
-        console.log("upclicked, current: " + current);
       } else if (arrowid == "down" && current < 4 && current >= 1) {
         setCurrent(current + 1);
         window.scroll(0, current * window.innerHeight);
-        console.log("downclicked, current: " + current);
       }
     }
   };
