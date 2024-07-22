@@ -69,7 +69,6 @@ const MultiStepForm = () => {
           orientation={isMobile ? "horizontal" : "vertical"}
           variant="scrollable"
           value={value}
-          onChange={handleChange}
           aria-label="Vertical tabs "
           TabIndicatorProps={{
             style: {

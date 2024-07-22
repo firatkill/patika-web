@@ -45,7 +45,7 @@ const TotalResult = (props) => {
               <Card
                 sx={{
                   width: "100% !important",
-                  height: "100px",
+                  height: "150px",
                   textAlign: "center",
                 }}
               >
@@ -60,7 +60,7 @@ const TotalResult = (props) => {
               <Card
                 sx={{
                   width: "100% !important",
-                  height: "100px",
+                  height: "150px",
                   textAlign: "center",
                 }}
               >
@@ -75,7 +75,7 @@ const TotalResult = (props) => {
               <Card
                 sx={{
                   width: "100% !important",
-                  height: "100px",
+                  height: "150px",
                   textAlign: "center",
                 }}
               >
@@ -90,7 +90,7 @@ const TotalResult = (props) => {
               <Card
                 sx={{
                   width: "100% !important",
-                  height: "100px",
+                  height: "150px",
                   textAlign: "center",
                 }}
               >
@@ -105,7 +105,7 @@ const TotalResult = (props) => {
               <Card
                 sx={{
                   width: "100% !important",
-                  height: "100px",
+                  height: "150px",
                   textAlign: "center",
                 }}
               >
