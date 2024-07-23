@@ -30,7 +30,7 @@ const initialState = {
 export const postOceanAnswers = createAsyncThunk(
   "postOceanAnswers",
   async (json) => {
-    let response = await fetch("http://127.0.0.1:5000/predict-ocean", {
+    let response = await fetch("https://tryout2.onrender.com/predict-ocean", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export const postOceanAnswers = createAsyncThunk(
 export const postSurveyAnswers = createAsyncThunk(
   "postSurveyAnswers",
   async (json) => {
-    let response = await fetch("http://127.0.0.1:5000/ask-to-gpt", {
+    let response = await fetch("https://tryout2.onrender.com/ask-to-gpt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
