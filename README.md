@@ -1,11 +1,12 @@
 Bu proje, [Next.js](https://nextjs.org/) ile oluşturulmuş bir web uygulamasıdır.
+Arkap
 
 ### Kurulum
 
 npm install # veya yarn install ile dependency'leri yükleyin.
 
 ````
-
+e
 ### Geliştirme Sunucusunu Başlatma
 
 Geliştirme sunucusunu başlatmak için aşağıdaki komutu çalıştırın:
@@ -30,7 +31,7 @@ Ardından, prod ortamında çalıştırmak için:
 npm start # veya yarn start
 ```
 
-\*\*Projeyi Backend_flask ile birlikte çalıştırın.
+\*\*Projeyi Backend_flask klasöründe bulunan flask server ile birlikte çalıştırın.
 
 ## Proje Yapısı
 

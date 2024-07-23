@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 const OceanResults = (props) => {
   const oceanContent = useSelector((state) => state.content.oceanContent);
   const campaigns = Object.values(oceanContent.campaigns);
-  console.log();
 
   const series = [
     {
@@ -30,7 +29,7 @@ const OceanResults = (props) => {
     },
   ];
   const valueFormatter = (value) => `${value * 20}`;
-  console.log(campaigns);
+
   return (
     <div className={styles.oceanResultsContainer}>
       <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>

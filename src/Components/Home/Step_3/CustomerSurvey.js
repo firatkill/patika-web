@@ -142,7 +142,6 @@ const CustomerSurvey = (props) => {
           prompt,
         })
       );
-      console.log(prompt);
 
       props.nextStep();
     } else {

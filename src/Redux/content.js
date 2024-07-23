@@ -86,7 +86,7 @@ const contentSlice = createSlice({
     });
     builder.addCase(postSurveyAnswers.fulfilled, (state, action) => {
       state.loading = false;
-      console.log(action.payload);
+
       state.surveyContent = action.payload;
     });
     builder.addCase(postSurveyAnswers.rejected, (state, action) => {
